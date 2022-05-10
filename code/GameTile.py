@@ -3,11 +3,17 @@
 from enum import Enum 
 
 TILE_TYPE = Enum('TILE_TYPE', 'water mountain forest swamp desert')
-
+# non mandatory information
+ANIMAL_TYPE = Enum('ANIMAL_TYPE', 'couger bear none')
+STRUCTURE_TYPE = Enum('STRUCTURE_TYPE', 'standing_stone abadoned_shack none')
+COLOR_TYPE = Enum('COLOR_TYPE', 'blue white green none')
 
 class GameTile:
-  def __init__(self, type, x, y):
+  def __init__(self, type, y, x, animal=ANIMAL_TYPE.none, structure=STRUCTURE_TYPE.none, color=COLOR_TYPE.none):
     self.type = type # expected to be a TILE_TYPE
+    self.animal = animal
+    self.structure = structure
+    self.color = color
     self.y = y
     self.x = x  
   
