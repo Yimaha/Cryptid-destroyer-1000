@@ -45,7 +45,7 @@ class GameBoard:
           computed_map[top_left_y + j][top_left_x + k] = continent[j][k]
           computed_map[top_left_y + j][top_left_x + k].y = top_left_y + j
           computed_map[top_left_y + j][top_left_x + k].x = top_left_x + k
-          self.update_continent_if_has_structure(self, computed_map[top_left_y + j][top_left_x + k], structures)
+          self.update_continent_if_has_structure(self, computed_map[top_left_y + j][top_left_x + k], structures)s
 
 
   def update_continent_if_has_structure(self, tile, structures):
